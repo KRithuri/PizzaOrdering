@@ -10,5 +10,7 @@ namespace PizzaOrdering
     {
         //array to hold pizza toppings
         public string[] toppings = new string[10];
+        //data field for price
+        public double price;
     }
 }
