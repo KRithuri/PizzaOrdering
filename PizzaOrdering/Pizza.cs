@@ -12,5 +12,15 @@ namespace PizzaOrdering
         public string[] toppings = new string[10];
         //data field for price
         public double price;
+        public string line = null;
+
+        //pizza constructor
+        public Pizza(string[]top, int num)
+        {
+            //loop to add toppings to arra
+            for (int i = 0; i < num; i++)
+            {
+                line += top[i] + " , ";
+            }
     }
 }
