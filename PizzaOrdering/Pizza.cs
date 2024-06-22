@@ -8,5 +8,7 @@ namespace PizzaOrdering
 {
     internal class Pizza
     {
+        //array to hold pizza toppings
+        public string[] toppings = new string[10];
     }
 }
