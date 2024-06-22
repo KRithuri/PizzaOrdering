@@ -7,5 +7,10 @@ using System.Threading.Tasks;
 
 namespace Pizza_Ordering
 {
-
+    static void Main(string[] args)
+    {
+        //variable for user input
+        string input = null;
+        
+    }
 }
