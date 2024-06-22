@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace PizzaOrdering
 {
-    internal class Delivery
+    //inheritance
+    internal class Delivery:Pizza
     {
+        private double DeliveryFee;
+        private string DeliveryAddress;
+
+        
     }
 }
