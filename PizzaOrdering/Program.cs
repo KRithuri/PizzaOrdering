@@ -11,6 +11,8 @@ namespace Pizza_Ordering
     {
         //variable for user input
         string input = null;
+        //array for toppings 
+        string[] top = new string[10];
         
     }
 }
