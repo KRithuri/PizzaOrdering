@@ -38,6 +38,12 @@ namespace PizzaOrdering
             }
             //new pizza object
             Pizza pizza = new Pizza(top, x);
+            Console.WriteLine(pizza.ToString());
+
+            string deliveryAdd = "";
+            //ask user input for delivery option
+            Console.WriteLine("Delivery? Y/N: ");
+            delivery = Console.ReadLine();
         }
     }
 }
