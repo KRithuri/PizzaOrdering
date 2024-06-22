@@ -13,6 +13,14 @@ namespace Pizza_Ordering
         string input = null;
         //array for toppings 
         string[] top = new string[10];
-        
+        int x = 0;
+        string delivery;
+        string delFee = 0;
+
+        while(x < 10)
+        {
+            //ask user to enter topping
+            Console.Write("Enter topping " + (x + 1) + ": ");
+        }
     }
 }
