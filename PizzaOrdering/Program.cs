@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizza_Ordering
+namespace PizzaOrdering
 {
     internal class RunPizza
     {
@@ -36,6 +36,8 @@ namespace Pizza_Ordering
                     break;
                 }
             }
+            //new pizza object
+            Pizza pizza = new Pizza(top, x);
         }
     }
 }
