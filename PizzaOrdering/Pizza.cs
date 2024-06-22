@@ -17,7 +17,7 @@ namespace PizzaOrdering
         //pizza constructor
         public Pizza(string[]top, int num)
         {
-            //loop to add toppings to arra
+            //loop to add toppings to array
             for (int i = 0; i < num; i++)
             {
                 line += top[i] + " , ";
