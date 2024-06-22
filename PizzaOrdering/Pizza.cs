@@ -22,5 +22,7 @@ namespace PizzaOrdering
             {
                 line += top[i] + " , ";
             }
+            //adjust price based on the number of toppings
+            price = 40 + (num * 4);
     }
 }
