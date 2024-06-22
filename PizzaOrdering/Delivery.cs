@@ -10,12 +10,12 @@ namespace PizzaOrdering
     internal class Delivery:Pizza
     {
         private double DeliveryFee;
-        private string DeliveryAddress;
+        private string deliveryAddress;
 
         //delivery pizza constructor
-        public DeliveryPizza(string[] top, string _deliveryAddress, int num): base(top, num)
+        public Delivery(string[] top, string _deliveryAddress, int num) : base(top, num)
         {
-            DeliveryAddress = _deliveryAddress;
+            deliveryAddress = _deliveryAddress;
 
         }
         //method to calculate delivery fee

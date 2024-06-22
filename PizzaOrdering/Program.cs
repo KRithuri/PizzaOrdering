@@ -12,14 +12,15 @@ namespace PizzaOrdering
         static void Main(string[] args)
         {
             //variable for user input
-            string input = null;
+            string input;
             //array for toppings 
             string[] top = new string[10];
             int x = 0;
-            string delivery;
-            string delFee = 0;
+            string del;
+            double delFee = 0;
 
             //loop to populate toppings array
+            //Console.Write("Enter topping: ");
             while (x < 10)
             {
                 //ask user to enter topping
@@ -43,7 +44,23 @@ namespace PizzaOrdering
             string deliveryAdd = "";
             //ask user input for delivery option
             Console.WriteLine("Delivery? Y/N: ");
-            delivery = Console.ReadLine();
+            del = Console.ReadLine();
+            if (del.ToUpper() == "Y")
+            {
+                Console.WriteLine("Enter delivery address: ");
+                deliveryAdd = Console.ReadLine();
+                //new delivery object
+                Delivery delPizza = new Delivery(top, deliveryAdd, x);
+                delPizza.deliveryFee();
+                delFee = delPizza.deliveryFee();
+                Console.WriteLine("To be delivered at " + deliveryAdd + ", Pizza price is " + pizza.ToString() + " amd the delivery fee is: " + delFee);
+            }
+            else
+            {
+                Console.WriteLine("No delivery!" + "\nPizza price is " + pizza.ToString() + " and the delivery fee is: " + delFee);
+            }
+            Console.ReadLine();
         }
+        
     }
 }

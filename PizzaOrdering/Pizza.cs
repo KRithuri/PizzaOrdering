@@ -30,7 +30,7 @@ namespace PizzaOrdering
         //method to display the Pizza description and price
         public override string ToString()
         {
-            return price + " with " + line + "topping(s)";
+            return "R"+price + " with " + line + "topping(s)";
         }
     }
 }
