@@ -42,24 +42,12 @@ namespace PizzaOrdering
                 Console.WriteLine("Would you like to order another pizza?");
                 reorder = Console.ReadLine();
             
-                
+                //code to run if user wants to add more pizza
                 if(reorder.ToUpper() == "Y"){
-                    // Console.Write("Enter pizza flavour " + ": ");
-                    // answer = Console.ReadLine();
-                    // pizz[x] = answer;
-                    // Console.Write("Enter topping " + ": ");
-                    // input = Console.ReadLine();
-                    // top[x] = input;
                     order = true;
                 }
-                //if (answer.ToUpper() != "QUIT"){
-                   // pizz[x] = answer;
-                    //x++;
-                //}
                 else{
-                    // break;
                     order = false;
-
                 }
 
             }
