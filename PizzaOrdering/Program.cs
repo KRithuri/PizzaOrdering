@@ -11,35 +11,60 @@ namespace PizzaOrdering
     {
         static void Main(string[] args)
         {
+            string answer;
             //variable for user input
             string input;
             //array for toppings 
             string[] top = new string[10];
+
+            //arra for pizza 
+            string [] pizz = new string[10];
+
             int x = 0;
+            //int y = 0;
             string del;
             double delFee = 0;
+            string reorder;
+            bool order =true;
 
-            //loop to populate toppings array
-            //Console.Write("Enter topping: ");
-            while (x < 10)
-            {
-                //ask user to enter topping
-                Console.Write("Enter topping " + (x + 1) + ": ");
+            while(order){
+                Console.Write("Enter pizza flavour " + ": ");
+                answer = Console.ReadLine();
+                //populate pizza flavours array
+                pizz[x] = answer;
+                Console.Write("Enter topping "  + ": ");
                 input = Console.ReadLine();
+                //populate toppings array
+                top[x] = input;
+                //increment x
+                x++;
 
-                if(input.ToUpper() != "QUIT")
-                {
-                    top[x] = input;
-                    x++;
+                Console.WriteLine("Would you like to order another pizza?");
+                reorder = Console.ReadLine();
+            
+                
+                if(reorder.ToUpper() == "Y"){
+                    // Console.Write("Enter pizza flavour " + ": ");
+                    // answer = Console.ReadLine();
+                    // pizz[x] = answer;
+                    // Console.Write("Enter topping " + ": ");
+                    // input = Console.ReadLine();
+                    // top[x] = input;
+                    order = true;
                 }
-                else
-                {
-                    break;
+                //if (answer.ToUpper() != "QUIT"){
+                   // pizz[x] = answer;
+                    //x++;
+                //}
+                else{
+                    // break;
+                    order = false;
+
                 }
+
             }
             //new pizza object
-            Pizza pizza = new Pizza(top, x);
-            Console.WriteLine(pizza.ToString());
+            Pizza pizza = new Pizza(top, x, pizz);
 
             string deliveryAdd = "";
             //ask user input for delivery option
@@ -50,14 +75,14 @@ namespace PizzaOrdering
                 Console.WriteLine("Enter delivery address: ");
                 deliveryAdd = Console.ReadLine();
                 //new delivery object
-                Delivery delPizza = new Delivery(top, deliveryAdd, x);
+                Delivery delPizza = new Delivery(top, deliveryAdd, x, pizz);
                 delPizza.deliveryFee();
                 delFee = delPizza.deliveryFee();
-                Console.WriteLine("To be delivered at " + deliveryAdd + ", Pizza price is " + pizza.ToString() + " amd the delivery fee is: " + delFee);
+                Console.WriteLine("To be delivered at " + deliveryAdd + ",\nPizza flavours: " + pizza.ToString() + " and the delivery fee is: " + delFee);
             }
             else
             {
-                Console.WriteLine("No delivery!" + "\nPizza price is " + pizza.ToString() + " and the delivery fee is: " + delFee);
+                Console.WriteLine("No delivery!" + "\nPizza price for pizza(s): "  + pizza.ToString() + " and the delivery fee is: " + delFee);
             }
             Console.ReadLine();
         }
