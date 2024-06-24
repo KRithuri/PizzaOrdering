@@ -70,7 +70,7 @@ namespace PizzaOrdering
             }
             else
             {
-                Console.WriteLine("No delivery!" + "\nPizza price for pizza(s): "  + pizza.ToString() + " and the delivery fee is: " + delFee);
+                Console.WriteLine("No delivery!" + "\nPizza flavour(s): "  + pizza.ToString() + " and the delivery fee is: " + delFee);
             }
             Console.ReadLine();
         }

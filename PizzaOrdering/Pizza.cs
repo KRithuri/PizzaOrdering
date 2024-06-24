@@ -72,7 +72,7 @@ namespace PizzaOrdering
         //method to display the Pizza description and price
         public override string ToString()
         {
-            return pizz + "flavours\nTotal cost is: R" + price + " with " + Line + "topping(s)";
+            return pizz + "\nTopping(s): " + Line + "\nTotal cost is: R" + price  ;
         }
     }
 }
