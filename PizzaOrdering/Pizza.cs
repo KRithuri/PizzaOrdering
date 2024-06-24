@@ -49,24 +49,26 @@ namespace PizzaOrdering
         public Pizza(string[]pizzaFlavour, int num1,string[] top, int num2)
         {
 
+            //loop to add pizza flavours to array
             for(int i = 0; i < num1; i++){
                 pizz += pizzaFlavour[i] + " , ";
+                PizzaPrice += 40;
             }
-            pizzaPrice = 40;
+            
             //loop to add toppings to array
             for (int i = 0; i < num2; i++)
             {
-                line += top[i] + " , ";
+                Line += top[i] + " , ";
             }
             //adjust price based on the number of toppings
-            price = pizzaPrice + (num2 * 4);
+            Price = PizzaPrice + (num2 * 4);
         }
   
 
         //method to display the Pizza description and price
         public override string ToString()
         {
-            return pizz +  "flavours\nTotal cost is: R"+price + " with " + line + "topping(s)";
+            return Pizz +  "flavours\nTotal cost is: R"+Price + " with " + Line + "topping(s)";
         }
     }
 }
