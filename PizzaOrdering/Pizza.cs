@@ -11,13 +11,15 @@ namespace PizzaOrdering
         //array to hold pizza flavours
         private string [] pizzaFlavour = new string [10];
         //array to hold pizza toppings
-        public string[] toppings = new string[10];
+        private string[] toppings = new string[10];
         
         //data field for price
-        public double price;
+        private double price;
 
-        public double pizzaPrice;
+        //data field for pizza price
+        private double pizzaPrice;
 
+        
         public string line = null;
 
         public string pizz = null;
@@ -38,6 +40,19 @@ namespace PizzaOrdering
             price = pizzaPrice + (num2 * 4);
         }
         public double Price { set; get; }
+
+        public double PizzaPrice { 
+            get { return pizzaPrice; }
+            set { pizzaPrice = value;}
+        }
+        public string [] PizzaFlavour{
+            get { return pizzaFlavour;}
+            set { pizzaFlavour = value;}
+        }
+        public string [] Toppings{
+            get { return toppings;}
+            set { toppings = value;}
+        }
 
         //method to display the Pizza description and price
         public override string ToString()
