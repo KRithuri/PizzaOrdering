@@ -8,10 +8,8 @@ namespace PizzaOrdering
 {
     internal class Pizza
     {
-        //string to hold pizza flavours
-        public string [] pizza = new string [10];
-
-
+        //array to hold pizza flavours
+        private string [] pizzaFlavour = new string [10];
         //array to hold pizza toppings
         public string[] toppings = new string[10];
         
@@ -24,11 +22,11 @@ namespace PizzaOrdering
 
         public string pizz = null;
         //pizza constructor
-        public Pizza(string[]pizza, int num1,string[] top, int num2)
+        public Pizza(string[]pizzaFlavour, int num1,string[] top, int num2)
         {
 
             for(int i = 0; i < num1; i++){
-                pizz += pizza[i] + " , ";
+                pizz += pizzaFlavour[i] + " , ";
             }
             pizzaPrice = 40;
             //loop to add toppings to array
