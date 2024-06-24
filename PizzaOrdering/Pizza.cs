@@ -57,23 +57,17 @@ namespace PizzaOrdering
         //pizza constructor
         public Pizza(string[] pizzaFlavour, int num, string[] top)
         {
-            //loop to add pizza flavours to array
+            //loop to add pizza flavours and toppings 
             for (int i = 0; i < num; i++)
             {
+                //add to pizza flavour array
                 pizz += pizzaFlavour[i] + " , ";
                 pizzaPrice += 40;
+                //add to toppings array
                 line += top[i] + " , ";
             }
             //adjust price based on number of toppings
             price = pizzaPrice + (num * 4);
-
-            //loop to add toppings to array
-            //for (int i = 0; i < num1; i++)
-            //{
-                //line += top[i] + " , ";
-            //}
-            //adjust price based on the number of toppings
-            //price = pizzaPrice + (num1 * 4);
         }
         //method to display the Pizza description and price
         public override string ToString()
