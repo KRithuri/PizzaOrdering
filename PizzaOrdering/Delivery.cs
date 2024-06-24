@@ -13,7 +13,7 @@ namespace PizzaOrdering
         private string deliveryAddress;
 
         //delivery pizza constructor
-        public Delivery(string[] top, string _deliveryAddress, int num) : base(top, num)
+        public Delivery(string[] top, string _deliveryAddress, int num1, string [] pizz) : base(top, num1, pizz)
         {
             deliveryAddress = _deliveryAddress;
 
@@ -21,7 +21,7 @@ namespace PizzaOrdering
         //method to calculate delivery fee
         public double deliveryFee()
         {
-            if(price < 50)
+            if(PizzaPrice < 100)
             {
                 DeliveryFee = 20;
             }
