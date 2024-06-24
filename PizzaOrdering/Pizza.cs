@@ -19,10 +19,32 @@ namespace PizzaOrdering
         //data field for pizza price
         private double pizzaPrice;
 
-        
-        public string line = null;
+        private string line = null;
 
-        public string pizz = null;
+        private string pizz = null;
+
+              public double Price { set; get; }
+
+        public double PizzaPrice { 
+            get { return pizzaPrice; }
+            set { pizzaPrice = value;}
+        }
+        public string Line{
+            get { return line; }
+            set { line = value; }
+        }
+        public string Pizz{
+            get { return pizz; }
+            set { pizz = value; }
+        }
+        public string [] PizzaFlavour{
+            get { return pizzaFlavour;}
+            set { pizzaFlavour = value;}
+        }
+        public string [] Toppings{
+            get { return toppings;}
+            set { toppings = value;}
+        }
         //pizza constructor
         public Pizza(string[]pizzaFlavour, int num1,string[] top, int num2)
         {
@@ -39,20 +61,7 @@ namespace PizzaOrdering
             //adjust price based on the number of toppings
             price = pizzaPrice + (num2 * 4);
         }
-        public double Price { set; get; }
-
-        public double PizzaPrice { 
-            get { return pizzaPrice; }
-            set { pizzaPrice = value;}
-        }
-        public string [] PizzaFlavour{
-            get { return pizzaFlavour;}
-            set { pizzaFlavour = value;}
-        }
-        public string [] Toppings{
-            get { return toppings;}
-            set { toppings = value;}
-        }
+  
 
         //method to display the Pizza description and price
         public override string ToString()
